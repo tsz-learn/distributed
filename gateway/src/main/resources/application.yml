@@ -1,0 +1,34 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: gate-way-main
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: rest_api
+          uri: lb://REST-API
+#          uri: http://192.168.1.3:8001
+          predicates:
+          - Path=/get/city/**,/get/country/**,/get/province/**
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://192.168.1.3:7001/eureka/,http://192.168.1.3:7002/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+logging:
+  level:
+    com:
+      springcloud: debug
+my-load-balanced-service:
+  ribbon:
+    # 定义负载均衡的服务列表
+#    listOfServers: localhost:1001, localhost:1002,localhost:1003
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
