@@ -23,7 +23,7 @@
         <jdbc.version>8.0.19</jdbc.version>
         <mybatis.version>2.1.1</mybatis.version>
         <boot.version>2.2.2.RELEASE</boot.version>
-        <json.version>1.2.62</json.version>
+        <json.version>1.2.83</json.version>
         <druid.version>1.1.18</druid.version>
         <openfeign.version>2.2.0.RELEASE</openfeign.version>
         <mapper.version>2.1.5</mapper.version>
