@@ -20,7 +20,7 @@
         <hystrix.version>2.1.2.RELEASE</hystrix.version>
         <netflix.version>2.2.2.RELEASE</netflix.version>
         <lombok.version>1.18.12</lombok.version>
-        <jdbc.version>8.0.19</jdbc.version>
+        <jdbc.version>8.0.28</jdbc.version>
         <mybatis.version>2.1.1</mybatis.version>
         <boot.version>2.2.2.RELEASE</boot.version>
         <json.version>1.2.62</json.version>
